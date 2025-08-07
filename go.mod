@@ -1,4 +1,4 @@
-module github.com/lefalya/item
+module github.com/21strive/item
 
 go 1.21
 
