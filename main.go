@@ -24,10 +24,10 @@ type Blueprint interface {
 }
 
 type Foundation struct {
-	UUID      string    `json:"uuid,omitempty" bson:"uuid"`
-	RandId    string    `json:"randid,omitempty" bson:"randid"`
-	CreatedAt time.Time `json:"createdAt" bson:"createdat"`
-	UpdatedAt time.Time `json:"updatedAt" bson:"updatedat"`
+	UUID      string    `json:"uuid,omitempty" bson:"uuid" db:"uuid"`
+	RandId    string    `json:"randid,omitempty" bson:"randid" db:"randid"`
+	CreatedAt time.Time `json:"createdAt" bson:"created_at" db:"created_at"`
+	UpdatedAt time.Time `json:"updatedAt" bson:"updated_at" db:"updated_at"`
 }
 
 func (i *Foundation) SetUUID() {
