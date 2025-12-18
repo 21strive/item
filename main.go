@@ -1,10 +1,11 @@
 package item
 
 import (
-	"github.com/google/uuid"
 	"math/rand"
 	"reflect"
 	"time"
+
+	"github.com/google/uuid"
 )
 
 const (
@@ -31,7 +32,8 @@ type Foundation struct {
 }
 
 func (i *Foundation) SetUUID() {
-	i.UUID = uuid.New().String()
+	uuid7, _ := uuid.NewV7()
+	i.UUID = uuid7.String()
 }
 
 func (i *Foundation) GetUUID() string {
